@@ -13,6 +13,7 @@
 		3888301C1F26B24900C032D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3888301A1F26B24900C032D4 /* LaunchScreen.storyboard */; };
 		388830241F26B6E500C032D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388830231F26B6E500C032D4 /* Assets.xcassets */; };
 		38A0B0A91F2D0030007D236A /* FriendsControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0B0A81F2D0030007D236A /* FriendsControllerHelper.swift */; };
+		38A0B0AE1F2E5F2D007D236A /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0B0AD1F2E5F2D007D236A /* ChatLogController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3888301D1F26B24900C032D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		388830231F26B6E500C032D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38A0B0A81F2D0030007D236A /* FriendsControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsControllerHelper.swift; sourceTree = "<group>"; };
+		38A0B0AD1F2E5F2D007D236A /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3888301D1F26B24900C032D4 /* Info.plist */,
 				388830151F26B24900C032D4 /* FBMessenger.xcdatamodeld */,
 				38A0B0A81F2D0030007D236A /* FriendsControllerHelper.swift */,
+				38A0B0AD1F2E5F2D007D236A /* ChatLogController.swift */,
 			);
 			path = FBMessenger;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A0B0AE1F2E5F2D007D236A /* ChatLogController.swift in Sources */,
 				388830111F26B24900C032D4 /* FriendsController.swift in Sources */,
 				3888300F1F26B24900C032D4 /* AppDelegate.swift in Sources */,
 				388830171F26B24900C032D4 /* FBMessenger.xcdatamodeld in Sources */,
