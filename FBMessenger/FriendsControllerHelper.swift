@@ -69,9 +69,22 @@ extension FriendsController {
         
             let donald = NSEntityDescription.insertNewObject(forEntityName: "Friend", into: context) as! Friend
             donald.name = "Donald Trump"
-            donald.profileImageName = "donald_trump"
+            donald.profileImageName = "donald_trump_profile"
             
-            createMessageWithText("You're fired!", friend: donald, minutesAgo: 1, context: context)
+            createMessageWithText("You're fired!", friend: donald, minutesAgo: 60*5, context: context)
+            
+            let gandhi = NSEntityDescription.insertNewObject(forEntityName: "Friend", into: context) as! Friend
+            gandhi.name = "Mahatma Gandhi"
+            gandhi.profileImageName = "gandhi"
+            
+            createMessageWithText("Love, peace, and joy", friend: gandhi, minutesAgo: 60*24*2, context: context)
+            
+            let hillary = NSEntityDescription.insertNewObject(forEntityName: "Friend", into: context) as! Friend
+            hillary.name = "Hillary Clinton"
+            hillary.profileImageName = "hillary_profile"
+            
+            createMessageWithText("Love, peace, and joy", friend: hillary, minutesAgo: 60*24*12, context: context)
+            
             
             do {
                 try (context.save())
@@ -109,6 +122,7 @@ extension FriendsController {
         return nil
     }
     
+    // Fix later, random error???
     func loadData() {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -127,7 +141,11 @@ extension FriendsController {
                     
                     do {
                         let fetchedMessages = try(context.fetch(fetchRequest)) as? [Message]
-                        messages?.append(fetchedMessages!)
+                        for message in fetchedMessages!
+                        {
+                            messages?.append(message)
+                        }
+                     
                     } catch let error {
                         print(error)
                     }
