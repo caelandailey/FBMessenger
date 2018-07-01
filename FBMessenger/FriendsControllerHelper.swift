@@ -52,7 +52,7 @@ extension FriendsController {
             let message = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
             message.friend = mark
             message.text = "Hey, nice to meet you!"
-            message.date = NSDate()
+            message.date = Date()
         
             let steve = NSEntityDescription.insertNewObject(forEntityName: "Friend", into: context) as! Friend
             steve.name = "Steve Jobs"
@@ -61,7 +61,7 @@ extension FriendsController {
             let messageSteve = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
             messageSteve.friend = steve
             messageSteve.text = "Apple creates great iOS Devices for the world..."
-            messageSteve.date = NSDate()
+            messageSteve.date = Date()
             
             createMessageWithText("Good morning..", friend: steve, minutesAgo:  2, context: context)
             createMessageWithText("How are you?", friend: steve, minutesAgo:  1, context: context)
@@ -101,7 +101,7 @@ extension FriendsController {
         let messageSteve = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
         messageSteve.friend = friend
         messageSteve.text = text
-        messageSteve.date = NSDate().addingTimeInterval(-minutesAgo*60)
+        messageSteve.date = Date().addingTimeInterval(-minutesAgo*60)
     }
     
     private func fetchFriends() -> [Friend]? {
